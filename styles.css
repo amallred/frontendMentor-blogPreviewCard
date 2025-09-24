@@ -41,8 +41,7 @@ ol {
 
 :root {
     /* FONTS  */
-    /* --FF:  */
-    /*import font fam*/
+    --FF: 'Figtree';
     --FS: 1rem;
 
     /* COLORS  */
@@ -54,10 +53,10 @@ ol {
     --SHADOW-COLOR: hsl(0, 0%, 7%);
 
     /* BORDERS */
-    --BORDERS: 1px solid var(--BORDER-COLOR);
+    --BORDERS: 1.5px solid var(--BORDER-COLOR);
 
     /* SHADOWS */
-    --BOX-SHADOW: 0 0 50PX var(--SHADOW-COLOR);
+    --BOX-SHADOW: .5rem .5rem var(--SHADOW-COLOR);
 
     /* STANDARD PADDING */
     --PADDING-TEXT: 0.25em 2.5%;
@@ -73,6 +72,12 @@ ol {
         ================== */
 }
 
+@font-face {
+    font-display: swap;
+    font-family: "Figtree";
+    src: url("./assets/fonts/Figtree-VariableFont_wght.ttf"); 
+}
+
 /* || STYLING */
 
 body {
@@ -80,43 +85,59 @@ body {
     display: grid;
     place-content: center;
     height: 100dvh;
+    font-family: var(--FF);
 }
 .blog__card{
     background-color: var(--BGCARD);
-    width: 30rem;
+    width: 350px;
     border-radius: 1rem;
+    border: var(--BORDERS);
     box-shadow: var(--BOX-SHADOW);
-    text-align: center;
     display: grid;
-    align-items: center;
+    gap: 1rem;
+    padding: 1.15em;
+}
+
+.blog--image {
+    margin: 0 auto;
+    border-radius: 1em;
 }
 
 .btn {
-
+    background-color: var(--BGCOLOR);
+    padding: var(--PADDING-TEXT);
+    border-radius: .25em;
+    font-weight: 800;
+    justify-self: start;
 }
 
 .date {
-    
+    font-size: .75rem;;
 }
 
 .title {
-
+    font-size: 1.25rem;
 }
 
 .content {
-
+    color: var(--TEXT-COLOR);
+    font-size: 1rem;
 }
 
 .profile {
-
+    display: flex;
+    align-items: center;
+    gap: .75em;
 }
 
 .headshot{
-
+    height: 2em;
+    width: auto;
 }
 
 .author {
-
+    font-size: 1em;
+    font-weight: 800;
 }
 
 .attribution {
